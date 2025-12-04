@@ -21,6 +21,50 @@ import { TiltDashboard } from '@/components/tilt-dashboard';
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [pricingTier, setPricingTier] = useState(1);
+
+  const PRICING_TIERS = [
+    {
+      name: 'Free',
+      price: '$0',
+      views: '5,000 monthly views',
+      features: ['Core Features', 'Analytics', 'No Branding'],
+      cta: 'Get Started',
+      highlight: false
+    },
+    {
+      name: 'Pro',
+      price: '$29',
+      views: '50,000 monthly views',
+      features: ['Advanced Targeting', 'Priority Support', 'Zapier Integration'],
+      cta: 'Start Free Trial',
+      highlight: false
+    },
+    {
+      name: 'Pro+',
+      price: '$49',
+      views: '100,000 monthly views',
+      features: ['Everything in Pro', 'Advanced Analytics'],
+      cta: 'Start Free Trial',
+      highlight: true
+    },
+    {
+      name: 'Pro++',
+      price: '$99',
+      views: '500,000 monthly views',
+      features: ['Everything in Pro+', 'Priority Support', 'Team Members'],
+      cta: 'Start Free Trial',
+      highlight: false
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      views: 'Unlimited monthly views',
+      features: ['Dedicated Success Manager', 'SLA Guarantees', 'Custom Contracts'],
+      cta: 'Contact Sales',
+      highlight: false
+    }
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -57,7 +101,7 @@ export default function App() {
               <div className="w-6 h-6 bg-zinc-950 rounded-md flex items-center justify-center">
                 <div className="w-3 h-3 border-2 border-white rounded-sm"></div>
               </div>
-              Canvas
+              PopSmart
             </a>
             <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-500">
               <a href="#features" className="hover:text-zinc-900 transition-colors">Features</a>
@@ -105,7 +149,7 @@ export default function App() {
               <motion.div variants={fadeInUp} className="flex justify-center mb-8">
                 <Badge className="bg-zinc-50 text-zinc-600 hover:bg-zinc-100 px-4 py-1.5 gap-2 font-normal border-zinc-200">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  Canvas v2.0 is now available
+                  PopSmart v1.0 is now live
                   <ChevronRight size={14} className="text-zinc-400" />
                 </Badge>
               </motion.div>
@@ -114,15 +158,15 @@ export default function App() {
                 variants={fadeInUp}
                 className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-900 mb-8"
               >
-                Beautifully simple <br className="hidden md:block" />
-                project management.
+                High-converting popups, <br className="hidden md:block" />
+                zero performance cost.
               </motion.h1>
 
               <motion.p
                 variants={fadeInUp}
                 className="text-xl text-zinc-500 mb-10 max-w-2xl mx-auto leading-relaxed"
               >
-                Remove the clutter. Canvas provides a stark, powerful interface for teams who value clarity over complexity.
+                The lightweight visual builder for growth teams. Create multi-step campaigns that load instantly and never slow down your site.
               </motion.p>
 
               <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
@@ -131,7 +175,7 @@ export default function App() {
                 </Button>
                 <Button variant="outline" size="lg" className="h-12 px-8 text-base gap-2 w-full sm:w-auto">
                   <Play size={16} />
-                  Watch Demo
+                  View Demo
                 </Button>
               </motion.div>
             </motion.div>
@@ -164,8 +208,8 @@ export default function App() {
         <section id="features" className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="max-w-2xl mb-16">
-              <h2 className="text-3xl font-bold tracking-tight mb-4">Everything you need.<br />Nothing you don't.</h2>
-              <p className="text-lg text-zinc-500">We stripped away the bloat. What's left is a pure, high-speed workflow engine designed for flow state.</p>
+              <h2 className="text-3xl font-bold tracking-tight mb-4">Everything you need.<br />Nothing that slows you down.</h2>
+              <p className="text-lg text-zinc-500">We stripped away the bloat. What's left is a pure, high-performance conversion engine.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -175,8 +219,8 @@ export default function App() {
                   <div className="w-12 h-12 bg-white rounded-lg border border-zinc-200 flex items-center justify-center mb-6 shadow-sm">
                     <Zap className="w-6 h-6 text-zinc-900" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">Lightning Fast</h3>
-                  <p className="text-zinc-500 max-w-md">Built on a modern edge network. Interactions are instant (under 50ms). No loading spinners, just flow.</p>
+                  <h3 className="text-xl font-semibold mb-2">Lightning Fast Performance</h3>
+                  <p className="text-zinc-500 max-w-md">5kb lightweight script. Deferred loading ensures your core web vitals and SEO are never impacted.</p>
                 </div>
                 <div className="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-l from-white to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </Card>
@@ -186,10 +230,10 @@ export default function App() {
                 <div className="w-12 h-12 bg-zinc-100 rounded-lg flex items-center justify-center mb-6">
                   <Shield className="w-6 h-6 text-zinc-900" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
-                <p className="text-zinc-500 mb-8">SSO, Audit logs, and SOC2 Type II compliance included out of the box.</p>
+                <h3 className="text-xl font-semibold mb-2">Granular Targeting</h3>
+                <p className="text-zinc-500 mb-8">Show the right message to the right user with advanced display rules.</p>
                 <div className="space-y-3">
-                  {['SAML Auth', 'Audit Logs', 'Role Based Access'].map((item) => (
+                  {['Exit Intent', 'Scroll Depth', 'Inactivity Timer', 'Device Targeting'].map((item) => (
                     <div key={item} className="flex items-center justify-between p-3 rounded border border-zinc-100 bg-zinc-50 text-sm font-medium">
                       {item}
                       <div className="w-2 h-2 rounded-full bg-emerald-500"></div>
@@ -201,42 +245,25 @@ export default function App() {
               {/* Small Feature 1 */}
               <Card className="p-8 border-zinc-100 hover:border-zinc-300 transition-colors">
                 <div className="w-10 h-10 bg-zinc-100 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="w-5 h-5 text-zinc-900" />
+                  <LayoutDashboard className="w-5 h-5 text-zinc-900" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Real-time</h3>
-                <p className="text-sm text-zinc-500">See who is viewing a doc and edit together without conflict.</p>
+                <h3 className="text-lg font-semibold mb-2">Visual Builder</h3>
+                <p className="text-sm text-zinc-500">Drag-and-drop WYSIWYG editor with mobile-first templates.</p>
               </Card>
 
               {/* Small Feature 2 */}
               <Card className="p-8 border-zinc-100 hover:border-zinc-300 transition-colors">
                 <div className="w-10 h-10 bg-zinc-100 rounded-lg flex items-center justify-center mb-4">
-                  <LayoutDashboard className="w-5 h-5 text-zinc-900" />
+                  <Users className="w-5 h-5 text-zinc-900" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Integrations</h3>
-                <p className="text-sm text-zinc-500">Connects seamlessly with Linear, GitHub, and Slack.</p>
+                <p className="text-sm text-zinc-500">Connects seamlessly with Zapier to push leads anywhere.</p>
               </Card>
             </div>
           </div>
         </section>
 
-        {/* Testimonial */}
-        <section id="testimonials" className="py-24 bg-zinc-900 text-zinc-50">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <div className="mb-8">
-              {[1, 2, 3, 4, 5].map(i => <span key={i} className="text-yellow-500 text-xl">★</span>)}
-            </div>
-            <blockquote className="text-3xl md:text-4xl font-medium leading-tight mb-10">
-              "Canvas has completely replaced our fragmented toolset. It's the first time our team actually enjoys updating their status. The simplicity is a feature."
-            </blockquote>
-            <div className="flex items-center justify-center gap-4">
-              <div className="w-12 h-12 bg-zinc-700 rounded-full border-2 border-zinc-600"></div>
-              <div className="text-left">
-                <div className="font-bold">Sarah Jenkins</div>
-                <div className="text-zinc-400 text-sm">CTO at Horizon AI</div>
-              </div>
-            </div>
-          </div>
-        </section>
+
 
         {/* Pricing */}
         <section id="pricing" className="py-24">
@@ -246,49 +273,76 @@ export default function App() {
               <p className="text-zinc-500">Start for free, scale when you're ready.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {/* Starter */}
-              <Card className="p-8 flex flex-col border-zinc-200 hover:border-zinc-300 transition-colors">
-                <h3 className="text-lg font-semibold mb-2">Starter</h3>
-                <div className="text-3xl font-bold mb-6">$0 <span className="text-sm font-normal text-zinc-500">/mo</span></div>
-                <div className="space-y-4 mb-8 flex-1">
-                  {['Up to 5 members', 'Basic Workflows', '1 GB Storage'].map(feat => (
-                    <div key={feat} className="flex items-center gap-3 text-sm text-zinc-600">
-                      <Check size={16} className="text-zinc-900" /> {feat}
-                    </div>
-                  ))}
+            <div className="max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                {/* Slider Control */}
+                <div className="px-4">
+                  <div className="flex justify-between text-sm font-medium text-zinc-500 mb-8">
+                    <span>Free</span>
+                    <span>Enterprise</span>
+                  </div>
+                  <input
+                    type="range"
+                    min="0"
+                    max="4"
+                    step="1"
+                    value={pricingTier}
+                    onChange={(e) => setPricingTier(parseInt(e.target.value))}
+                    className="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-zinc-900 mb-8"
+                  />
+                  <div className="space-y-4">
+                    {PRICING_TIERS.map((tier, index) => (
+                      <div
+                        key={tier.name}
+                        className={`flex justify-between items-center p-3 rounded-lg cursor-pointer transition-colors ${pricingTier === index ? 'bg-zinc-100' : 'hover:bg-zinc-50'
+                          }`}
+                        onClick={() => setPricingTier(index)}
+                      >
+                        <span className={`font-medium ${pricingTier === index ? 'text-zinc-900' : 'text-zinc-500'}`}>
+                          {tier.name}
+                        </span>
+                        <span className={`text-sm ${pricingTier === index ? 'text-zinc-900' : 'text-zinc-400'}`}>
+                          {tier.views.split(' ')[0]} views
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <Button variant="outline" className="w-full">Get Started</Button>
-              </Card>
 
-              {/* Pro */}
-              <Card className="p-8 flex flex-col bg-zinc-900 text-white border-zinc-900 ring-4 ring-zinc-100 relative md:-translate-y-4">
-                <div className="absolute top-0 right-0 -mt-3 -mr-3 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">POPULAR</div>
-                <h3 className="text-lg font-semibold mb-2">Pro</h3>
-                <div className="text-3xl font-bold mb-6">$12 <span className="text-sm font-normal text-zinc-400">/user/mo</span></div>
-                <div className="space-y-4 mb-8 flex-1">
-                  {['Unlimited members', 'Advanced Analytics', 'Priority Support', 'Private Channels'].map(feat => (
-                    <div key={feat} className="flex items-center gap-3 text-sm text-zinc-300">
-                      <Check size={16} className="text-white" /> {feat}
-                    </div>
-                  ))}
-                </div>
-                <Button className="w-full bg-white text-zinc-900 hover:bg-zinc-100">Start Free Trial</Button>
-              </Card>
+                {/* Dynamic Card */}
+                <div className="flex justify-center md:justify-start">
+                  <Card className="w-full max-w-md p-8 flex flex-col bg-white border-zinc-200 shadow-lg transition-all duration-300 relative">
+                    {PRICING_TIERS[pricingTier].highlight && (
+                      <div className="absolute top-0 right-0 mt-4 mr-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                        POPULAR
+                      </div>
+                    )}
 
-              {/* Enterprise */}
-              <Card className="p-8 flex flex-col border-zinc-200 hover:border-zinc-300 transition-colors">
-                <h3 className="text-lg font-semibold mb-2">Enterprise</h3>
-                <div className="text-3xl font-bold mb-6">Custom</div>
-                <div className="space-y-4 mb-8 flex-1">
-                  {['SSO & SAML', 'Dedicated Success Manager', 'SLA Guarantees', 'Custom Contracts'].map(feat => (
-                    <div key={feat} className="flex items-center gap-3 text-sm text-zinc-600">
-                      <Check size={16} className="text-zinc-900" /> {feat}
+                    <h3 className="text-lg font-semibold mb-2 text-zinc-900">{PRICING_TIERS[pricingTier].name}</h3>
+                    <div className="text-3xl font-bold mb-6 text-zinc-900">
+                      {PRICING_TIERS[pricingTier].price}
+                      {PRICING_TIERS[pricingTier].price !== 'Custom' && <span className="text-sm font-normal text-zinc-500">/mo</span>}
                     </div>
-                  ))}
+
+                    <div className="space-y-4 mb-8 flex-1">
+                      <div className="flex items-center gap-3 text-sm font-medium text-zinc-900">
+                        <Users size={16} /> {PRICING_TIERS[pricingTier].views}
+                      </div>
+                      {PRICING_TIERS[pricingTier].features.map(feat => (
+                        <div key={feat} className="flex items-center gap-3 text-sm text-zinc-600">
+                          <Check size={16} className="text-zinc-900" /> {feat}
+                        </div>
+                      ))}
+                    </div>
+
+                    <Button
+                      className={`w-full bg-zinc-900 text-white hover:bg-zinc-800 cursor-pointer`}
+                    >
+                      {PRICING_TIERS[pricingTier].cta}
+                    </Button>
+                  </Card>
                 </div>
-                <Button variant="outline" className="w-full">Contact Sales</Button>
-              </Card>
+              </div>
             </div>
           </div>
         </section>
@@ -301,10 +355,10 @@ export default function App() {
             <div className="col-span-2 md:col-span-1">
               <div className="flex items-center gap-2 font-bold text-xl mb-4">
                 <div className="w-5 h-5 bg-zinc-900 rounded-md"></div>
-                Canvas
+                PopSmart
               </div>
               <p className="text-sm text-zinc-500 leading-relaxed">
-                Designing the future of work with tools that get out of your way.
+                The high-performance popup builder for modern SaaS growth teams.
               </p>
             </div>
             <div>
@@ -332,7 +386,7 @@ export default function App() {
             </div>
           </div>
           <div className="pt-8 border-t border-zinc-200 flex justify-between items-center text-sm text-zinc-500">
-            <p>© 2024 Canvas Inc. All rights reserved.</p>
+            <p>© 2024 PopSmart Inc. All rights reserved.</p>
             <div className="flex gap-4">
               <a href="#" className="hover:text-zinc-900">Twitter</a>
               <a href="#" className="hover:text-zinc-900">GitHub</a>
