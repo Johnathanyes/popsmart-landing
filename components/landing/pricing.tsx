@@ -5,6 +5,7 @@ import { Users, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Slider } from '@/components/ui/slider';
+import { Badge } from '../ui/badge';
 
 const PRICING_TIERS = [
     {
@@ -69,7 +70,7 @@ export function Pricing() {
                                 <span>Enterprise</span>
                             </div>
                             <Slider
-                                defaultValue={[pricingTier]}
+                                value={[pricingTier]}
                                 max={4}
                                 step={1}
                                 onValueChange={(vals: number[]) => setPricingTier(vals[0])}
@@ -98,9 +99,9 @@ export function Pricing() {
                         <div className="flex justify-center md:justify-start">
                             <Card className="w-full max-w-md p-8 flex flex-col bg-white border-zinc-200 shadow-lg transition-all duration-300 relative">
                                 {PRICING_TIERS[pricingTier].highlight && (
-                                    <div className="absolute top-0 right-0 mt-4 mr-4 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                                    <Badge className="absolute top-0 right-0 mt-4 mr-4 bg-blue-600 text-white text-xs px-3 py-1">
                                         POPULAR
-                                    </div>
+                                    </Badge>
                                 )}
 
                                 <h3 className="text-lg font-semibold mb-2 text-zinc-900">{PRICING_TIERS[pricingTier].name}</h3>
