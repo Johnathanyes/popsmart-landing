@@ -18,19 +18,18 @@ export function Features() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {/* Large Feature */}
-                    <Card className="md:col-span-2 p-8 bg-zinc-50/50 border-zinc-100 relative overflow-hidden group hover:border-zinc-300 transition-colors">
+                    <Card className="md:col-span-2 p-8 bg-zinc-50/50 border-zinc-100 relative overflow-hidden group hover:border-zinc-300 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
                         <div className="relative z-10">
                             <div className="w-12 h-12 bg-white rounded-lg border border-zinc-200 flex items-center justify-center mb-6 shadow-sm">
                                 <Zap className="w-6 h-6 text-zinc-900" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">Lightning Fast Performance</h3>
-                            <p className="text-zinc-500 max-w-md">5kb lightweight script. Deferred loading ensures your core web vitals and SEO are never impacted.</p>
+                            <p className="text-zinc-500 max-w-md">&lt;20kb lightweight script. Deferred loading ensures your core web vitals and SEO are never impacted.</p>
                         </div>
-                        <div className="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-l from-white to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </Card>
 
                     {/* Tall Feature */}
-                    <Card className="md:row-span-2 p-8 border-zinc-100 hover:border-zinc-300 transition-colors">
+                    <Card className="md:row-span-2 p-8 border-zinc-100 hover:border-zinc-300 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
                         <div className="w-12 h-12 bg-zinc-100 rounded-lg flex items-center justify-center mb-6">
                             <Shield className="w-6 h-6 text-zinc-900" />
                         </div>
@@ -47,21 +46,21 @@ export function Features() {
                     </Card>
 
                     {/* Small Feature 1 */}
-                    <Card className="p-8 border-zinc-100 hover:border-zinc-300 transition-colors">
+                    <Card className="p-8 border-zinc-100 hover:border-zinc-300 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
                         <div className="w-10 h-10 bg-zinc-100 rounded-lg flex items-center justify-center mb-4">
                             <LayoutDashboard className="w-5 h-5 text-zinc-900" />
                         </div>
                         <h3 className="text-lg font-semibold mb-2">Visual Builder</h3>
-                        <p className="text-sm text-zinc-500">Drag-and-drop WYSIWYG editor with mobile-first templates.</p>
+                        <p className="text-sm text-zinc-500">Drag-and-drop editor so you see exactly what you're building in real-time.</p>
                     </Card>
 
                     {/* Small Feature 2 */}
-                    <Card className="p-8 border-zinc-100 hover:border-zinc-300 transition-colors">
+                    <Card className="p-8 border-zinc-100 hover:border-zinc-300 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
                         <div className="w-10 h-10 bg-zinc-100 rounded-lg flex items-center justify-center mb-4">
                             <Users className="w-5 h-5 text-zinc-900" />
                         </div>
                         <h3 className="text-lg font-semibold mb-2">Integrations</h3>
-                        <p className="text-sm text-zinc-500">Connects seamlessly with Zapier to push leads anywhere.</p>
+                        <p className="text-sm text-zinc-500">Connects seamlessly with your CRM and marketing platforms to capture leads wherever you need them.</p>
                     </Card>
                 </div>
             </div>
