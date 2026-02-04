@@ -101,7 +101,7 @@ export default function App() {
               <div className="w-6 h-6 bg-zinc-950 rounded-md flex items-center justify-center">
                 <div className="w-3 h-3 border-2 border-white rounded-sm"></div>
               </div>
-              PopSmart
+              mado
             </a>
             <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-500">
               <a href="#features" className="hover:text-zinc-900 transition-colors">Features</a>
@@ -149,7 +149,7 @@ export default function App() {
               <motion.div variants={fadeInUp} className="flex justify-center mb-8">
                 <Badge className="bg-zinc-50 text-zinc-600 hover:bg-zinc-100 px-4 py-1.5 gap-2 font-normal border-zinc-200">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  PopSmart v1.0 is now live
+                  mado v1.0 is now live
                   <ChevronRight size={14} className="text-zinc-400" />
                 </Badge>
               </motion.div>
@@ -355,7 +355,7 @@ export default function App() {
             <div className="col-span-2 md:col-span-1">
               <div className="flex items-center gap-2 font-bold text-xl mb-4">
                 <div className="w-5 h-5 bg-zinc-900 rounded-md"></div>
-                PopSmart
+                mado
               </div>
               <p className="text-sm text-zinc-500 leading-relaxed">
                 The high-performance popup builder for modern SaaS growth teams.
@@ -386,7 +386,7 @@ export default function App() {
             </div>
           </div>
           <div className="pt-8 border-t border-zinc-200 flex justify-between items-center text-sm text-zinc-500">
-            <p>© 2024 PopSmart Inc. All rights reserved.</p>
+            <p>© 2024 mado Inc. All rights reserved.</p>
             <div className="flex gap-4">
               <a href="#" className="hover:text-zinc-900">Twitter</a>
               <a href="#" className="hover:text-zinc-900">GitHub</a>
