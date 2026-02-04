@@ -7,8 +7,7 @@ export function Footer() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
                     <div className="col-span-2 md:col-span-1">
                         <div className="flex items-center gap-2 font-bold text-xl mb-4">
-                            <div className="w-5 h-5 bg-zinc-900 rounded-md"></div>
-                            PopSmart
+                            mado
                         </div>
                         <p className="text-sm text-zinc-500 leading-relaxed">
                             The high-performance popup builder for modern SaaS growth teams.
@@ -39,7 +38,7 @@ export function Footer() {
                     </div>
                 </div>
                 <div className="pt-8 border-t border-zinc-200 flex justify-between items-center text-sm text-zinc-500">
-                    <p>© 2024 PopSmart Inc. All rights reserved.</p>
+                    <p>© 2024 mado Inc. All rights reserved.</p>
                     <div className="flex gap-4">
                         <a href="#" className="hover:text-zinc-900">Twitter</a>
                         <a href="#" className="hover:text-zinc-900">GitHub</a>

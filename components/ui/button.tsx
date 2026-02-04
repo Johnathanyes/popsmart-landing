@@ -15,10 +15,10 @@ export const Button = ({
     const baseStyles = "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
 
     const variants = {
-        default: "bg-zinc-900 text-zinc-50 hover:bg-zinc-900/90",
-        outline: "border border-zinc-200 bg-white hover:bg-zinc-100 hover:text-zinc-900",
-        ghost: "hover:bg-zinc-100 hover:text-zinc-900",
-        link: "text-zinc-900 underline-offset-4 hover:underline",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        outline: "border border-border bg-white hover:bg-secondary hover:text-secondary-foreground",
+        ghost: "hover:bg-secondary hover:text-secondary-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
     };
 
     const sizes = {
