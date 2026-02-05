@@ -9,7 +9,7 @@ import { Footer } from '@/components/landing/footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white font-sans text-zinc-950 selection:bg-zinc-100">
+    <div className="min-h-screen bg-white font-sans text-zinc-950">
       <Navigation />
 
       <main>
