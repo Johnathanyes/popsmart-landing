@@ -99,7 +99,7 @@ export function Pricing() {
                         <div className="flex justify-center md:justify-start">
                             <Card className="w-full max-w-md p-8 flex flex-col bg-white border-zinc-200 shadow-lg transition-all duration-300 relative min-h-[400px]">
                                 {PRICING_TIERS[pricingTier].highlight && (
-                                    <Badge className="absolute top-0 right-0 mt-4 mr-4 bg-[#3083ff] text-white text-xs px-3 py-1">
+                                    <Badge className="absolute top-0 right-0 mt-4 mr-4 bg-primary text-primary-foreground text-xs px-3 py-1">
                                         POPULAR
                                     </Badge>
                                 )}

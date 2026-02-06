@@ -25,12 +25,9 @@ export function Navigation() {
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-                <div className="flex items-center gap-8">
-                    <a href="#" className="flex items-center gap-2 font-bold text-xl tracking-tight">
-                        <div className="w-6 h-6 bg-zinc-950 rounded-md flex items-center justify-center">
-                            <div className="w-3 h-3 border-2 border-white rounded-sm"></div>
-                        </div>
-                        PopSmart
+                <div className="flex items-baseline gap-8">
+                    <a href="#" className="font-bold text-3xl tracking-tight leading-none">
+                        mado
                     </a>
                     <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-500">
                         <a href="#features" className="hover:text-zinc-900 transition-colors">Features</a>
