@@ -124,7 +124,7 @@ export function Pricing() {
                                 <Button
                                     className="w-full cursor-pointer"
                                 >
-                                    <a href="app.usemado.tech">
+                                    <a href="https://app.usemado.tech/">
                                         {PRICING_TIERS[pricingTier].cta}
                                     </a>
                                 </Button>

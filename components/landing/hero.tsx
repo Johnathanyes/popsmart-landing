@@ -48,7 +48,7 @@ export function Hero() {
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
                         <Button size="lg" className="h-12 px-8 text-base w-full sm:w-auto">
-                            <a href="app.usemado.tech">
+                            <a href="https://app.usemado.tech/">
                                 Start for free
                             </a>
                         </Button>

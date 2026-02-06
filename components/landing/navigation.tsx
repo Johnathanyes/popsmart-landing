@@ -38,12 +38,12 @@ export function Navigation() {
 
                 <div className="hidden md:flex items-center gap-4">
                     <Button variant="ghost" size="sm">
-                        <a href="app.usemado.tech">
+                        <a href="https://app.usemado.tech/">
                             Log in
                         </a>
                     </Button>
                     <Button size="sm">
-                        <a href="app.usemado.tech">
+                        <a href="https://app.usemado.tech/">
                             Get Started
                         </a>
                     </Button>
