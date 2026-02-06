@@ -97,9 +97,9 @@ export function Pricing() {
 
                         {/* Dynamic Card */}
                         <div className="flex justify-center md:justify-start">
-                            <Card className="w-full max-w-md p-8 flex flex-col bg-white border-zinc-200 shadow-lg transition-all duration-300 relative">
+                            <Card className="w-full max-w-md p-8 flex flex-col bg-white border-zinc-200 shadow-lg transition-all duration-300 relative min-h-[400px]">
                                 {PRICING_TIERS[pricingTier].highlight && (
-                                    <Badge className="absolute top-0 right-0 mt-4 mr-4 bg-blue-600 text-white text-xs px-3 py-1">
+                                    <Badge className="absolute top-0 right-0 mt-4 mr-4 bg-[#3083ff] text-white text-xs px-3 py-1">
                                         POPULAR
                                     </Badge>
                                 )}
@@ -110,7 +110,7 @@ export function Pricing() {
                                     {PRICING_TIERS[pricingTier].price !== 'Custom' && <span className="text-sm font-normal text-zinc-500">/mo</span>}
                                 </div>
 
-                                <div className="space-y-4 mb-8 flex-1">
+                                <div className="space-y-4 mb-8 flex-1 min-h-[180px]">
                                     <div className="flex items-center gap-3 text-sm font-medium text-zinc-900">
                                         <Users size={16} /> {PRICING_TIERS[pricingTier].views}
                                     </div>
@@ -122,9 +122,11 @@ export function Pricing() {
                                 </div>
 
                                 <Button
-                                    className={`w-full bg-zinc-900 text-white hover:bg-zinc-800 cursor-pointer`}
+                                    className="w-full cursor-pointer"
                                 >
-                                    {PRICING_TIERS[pricingTier].cta}
+                                    <a href="app.usemado.tech">
+                                        {PRICING_TIERS[pricingTier].cta}
+                                    </a>
                                 </Button>
                             </Card>
                         </div>

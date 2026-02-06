@@ -1,9 +1,7 @@
 "use client";
 
-import { motion } from 'framer-motion';
 import { ChevronRight, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import React from 'react';
 import { useState } from 'react';
 
@@ -50,11 +48,9 @@ export function Hero() {
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
                         <Button size="lg" className="h-12 px-8 text-base w-full sm:w-auto">
-                            Start for free
-                        </Button>
-                        <Button variant="outline" size="lg" className="h-12 px-8 text-base gap-2 w-full sm:w-auto">
-                            <Play size={16} />
-                            View Demo
+                            <a href="app.usemado.tech">
+                                Start for free
+                            </a>
                         </Button>
                     </div>
                 </div>
